@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern UI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1f2937;
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e5e7eb;
+  font-size: 0.9rem;
+}
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+}
+
+body.dark-mode header {
+  background-color: #111827;
+}
+
+body.dark-mode .card {
+  background-color: #2d2d2d;
+  color: #f4f4f4;
+}
+
+body.dark-mode footer {
+  background-color: #111827;
+  color: #ccc;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+    <h1>Modern UI Dashboard</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card-grid">
+      <div class="card">
+        <h2>Analytics</h2>
+        <p>Track performance metrics in real-time.</p>
+      </div>
+      <div class="card">
+        <h2>Tasks</h2>
+        <p>Manage your daily workflow efficiently.</p>
+      </div>
+      <div class="card">
+        <h2>Reports</h2>
+        <p>Generate detailed insights and summaries.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Modern UI Inc.</p>
+  </footer>
+  <script>
+  const toggleBtn = document.getElementById('toggle-theme');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>

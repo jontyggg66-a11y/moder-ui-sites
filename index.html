@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced EMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* style.css */
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.calculator-card:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+.result p {
+  margin: 8px 0;
+  font-weight: 500;
+}
+.Creater_name{
+    display: flex;
+    text-align: center;
+    gap: 5px;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 2px 4px;
+    margin: 1rem 0 0 5rem;
+    font-weight: 600;
+    color: grey;
+    width: fit-content;
+    background-color: #010642;
+    padding: 5px;
+}
+  </style>
+</head>
+<body>
+  <div class="calculator-card">
+    <h2>💰 EMI Calculator</h2>
+    <div class="input-group">
+      <label>Loan Amount (₹)</label>
+      <input type="number" id="loanAmount" placeholder="e.g. 500000">
+    </div>
+    <div class="input-group">
+      <label>Interest Rate (%)</label>
+      <input type="number" id="interestRate" placeholder="e.g. 7.5">
+    </div>
+    <div class="input-group">
+      <label>Tenure (Months)</label>
+      <input type="number" id="loanTenure" placeholder="e.g. 60">
+    </div>
+    <button onclick="calculateEMI()">Calculate</button>
+    <div class="result" id="resultBox">
+      <p id="emiOutput">Monthly EMI: ₹0.00</p>
+      <p id="totalInterest">Total Interest: ₹0.00</p>
+      <p id="totalPayment">Total Payment: ₹0.00</p>
+    </div>
+    <div class="Creater_name">
+       <sup>Created By</sup>Asif Ahmad........
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
